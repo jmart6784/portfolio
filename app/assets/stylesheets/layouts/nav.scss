@@ -1,0 +1,56 @@
+#nav-parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#nav-container {
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#inner-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+#inner-div a {
+  padding: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+#inner-div a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px white;
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
+}
+
+#inner-div a:hover:after { 
+  transform: scaleX(1); 
+}
+
+#inner-div a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#test {
+  margin-bottom: 5000px;
+  display: block;
+  font-size: 50px;
+}

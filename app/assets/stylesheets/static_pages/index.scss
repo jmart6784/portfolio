@@ -1,3 +1,16 @@
+// Video and video container styling
+#static-vid-div {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
 .static-index-video {
   object-fit: cover;
   min-width: 100%;
@@ -11,17 +24,7 @@
   z-index: -1;
 }
 
-.static-vid-div {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.static-index-vid-div {
-  height: 100%;
-}
-
+// Flip text styling
 .text {
   position: absolute;
   width: 700px;
@@ -33,7 +36,7 @@
   font-size: 40px;
 }
 
-p {
+.flip-p {
   display: inline-block;
   vertical-align: top;
   margin: 0;
@@ -41,7 +44,6 @@ p {
 
 .word {
   position: absolute;
-  // width: 220px;
   width: fit-content;
   opacity: 0;
 }
@@ -65,4 +67,37 @@ p {
 .letter.in {
   transform: rotateX(0deg);
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+// About me styling
+#static-index-container {
+  margin-top: 100vh;
+  padding-bottom: 2500px;
+  position: relative;
+}
+
+#dark-blur {
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#about-me-div {
+  // border: 1px solid red;
+  width: 50%;
+}
+
+.about-me-title {
+  font-size: 30px;
+}
+
+.about-me-txt {
+  line-height: 30px;
+  font-size: 20px;
 }

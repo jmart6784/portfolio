@@ -95,7 +95,7 @@ document.addEventListener("turbolinks:load", () => {
 
 // Change nav bar styling depending where user is located
 document.addEventListener("turbolinks:load", () => {
-  let navbarDiv = document.getElementById("inner-div");
+  let navbarDiv = document.getElementById("nav-dark-blur");
   navbarDiv.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
   navbarDiv.style.transition = "1.25s";
 
@@ -124,4 +124,52 @@ document.addEventListener("turbolinks:load", () => {
   });
 });
 
+// About me html code animation
+document.addEventListener("turbolinks:load", () => {
+  let amCode = document.getElementById("am-code");
+  let blinker = document.getElementById("text-blinker");
+  blinker.style.opacity = "1";
 
+  // text editor blinker animation
+  setInterval(() => {
+    if (blinker.style.opacity === "1") {
+      blinker.style.opacity = "0";
+    } else {
+      blinker.style.opacity = "1";
+    };
+  }, 500);
+
+  let ary = "<h1>Hello World!</h1>".split("");
+
+  let counter = 0;
+  let finished = false;
+
+  const typer = () => {
+    if (amCode.textContent != "<h1>Hello World!</h1>" && !finished) {
+      finished = false;
+      amCode.textContent += ary[counter];
+      counter += 1;
+    } else {
+
+      setTimeout(() => {
+        finished = true;
+
+        if (amCode.textContent === "") {
+          setTimeout(() => {
+            finished = false;
+          }, 2500);
+          
+        };
+        
+        counter = 0;
+  
+        if (amCode.textContent.length != 0) {
+          amCode.textContent = amCode.textContent.substring(0, amCode.textContent.length - 1);
+        }
+      }, 2500);
+
+    };
+  };
+
+  setInterval(typer, 250);
+});

@@ -72,25 +72,14 @@
 // About me styling
 #static-index-container {
   margin-top: 100vh;
-  padding-bottom: 2500px;
+  padding: 50px 50px 2500px 50px;
   position: relative;
-}
-
-#dark-blur {
-  background: rgba(0, 0, 0, 0.5);
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #about-me-div {
-  // border: 1px solid red;
-  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about-me-title {
@@ -100,4 +89,21 @@
 .about-me-txt {
   line-height: 30px;
   font-size: 20px;
+}
+
+#am-code-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#am-code {
+  justify-self: center;
+  align-self: center;
+}
+
+.am-text {
+  display: inline;
+  font-size: 50px;
+  font-weight: 100;
 }

@@ -8,8 +8,22 @@
 
 #nav-container {
   max-width: 960px;
+  width: 50%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 0 20px 0;
+  position: relative;
+}
+
+#nav-dark-blur {
+  background: rgba(0, 0, 0, 0.7);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98;
 }
 
 #inner-div {
@@ -17,17 +31,17 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #inner-div a {
   padding: 18px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(141, 141, 141, 0.6);
   font-size: 18px;
   font-weight: 900;
   text-decoration: none;
   display: block;
   width: 100%;
+  z-index: 99;
 }
 
 #inner-div a:after {
@@ -43,5 +57,5 @@
 }
 
 #inner-div a:hover {
-  color: rgba(255, 255, 255, 1.0);
+  color: rgba(192, 192, 192, 1.0);
 }

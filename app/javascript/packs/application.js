@@ -105,21 +105,17 @@ document.addEventListener("turbolinks:load", () => {
 
   window.addEventListener("scroll", () => {
     if(window.scrollY === 0) {
-
       requestAnimationFrame(() =>
         setTimeout(() => {
           navbarDiv.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
         })
       );
-      
     } else {
-
       requestAnimationFrame(() =>
         setTimeout(() => {
           navbarDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
         })
       );
-
     }
   });
 });
@@ -145,31 +141,64 @@ document.addEventListener("turbolinks:load", () => {
   let finished = false;
 
   const typer = () => {
-    if (amCode.textContent != "<h1>Hello World!</h1>" && !finished) {
-      finished = false;
-      amCode.textContent += ary[counter];
-      counter += 1;
+    
+    if (amCode.textContent.length > 21) {
+      amCode.textContent = "";
     } else {
+      if (amCode.textContent != "<h1>Hello World!</h1>" && !finished) {
+        finished = false;
+        amCode.textContent += ary[counter];
+        counter += 1;
+      } else {
 
-      setTimeout(() => {
-        finished = true;
+        setTimeout(() => {
+          finished = true;
 
-        if (amCode.textContent === "") {
-          setTimeout(() => {
-            finished = false;
-          }, 2500);
+          if (amCode.textContent === "") {
+            setTimeout(() => {
+              finished = false;
+            }, 2500);
+            
+          };
           
-        };
-        
-        counter = 0;
-  
-        if (amCode.textContent.length != 0) {
-          amCode.textContent = amCode.textContent.substring(0, amCode.textContent.length - 1);
-        }
-      }, 2500);
+          counter = 0;
+    
+          if (amCode.textContent.length != 0) {
+            amCode.textContent = amCode.textContent.substring(0, amCode.textContent.length - 1);
+          };
+        }, 2500);
 
+      };
     };
   };
 
   setInterval(typer, 250);
+});
+
+// content reveal on scroll
+document.addEventListener("turbolinks:load", () => {
+
+  let allContent = document.querySelectorAll(".content");
+
+  allContent.forEach(content => {
+    content.style.opacity = "0";
+    content.style.transition = "2s";
+
+    document.addEventListener('scroll', () => {
+      if (window.scrollY >= content.getBoundingClientRect().top) {
+        requestAnimationFrame(() =>
+          setTimeout(() => {
+            content.style.opacity = "1";
+          })
+        );
+      } else {
+        requestAnimationFrame(() =>
+          setTimeout(() => {
+            content.style.opacity = "0";
+          })
+        );
+      }
+    });
+  });
+
 });

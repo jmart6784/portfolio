@@ -82,12 +82,17 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.content {
+  opacity: 0;
+}
+
 .about-me-title {
   font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .about-me-txt {
-  line-height: 30px;
+  line-height: 35px;
   font-size: 20px;
 }
 

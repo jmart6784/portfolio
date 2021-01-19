@@ -80,13 +80,14 @@
 #about-me-div {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 300px;
 }
 
 .content {
   opacity: 0;
 }
 
-.about-me-title {
+.sec-title {
   font-size: 30px;
   margin-bottom: 10px;
 }
@@ -111,4 +112,135 @@
   display: inline;
   font-size: 50px;
   font-weight: 100;
+}
+
+// Skills section
+.skills-tile-div {
+  border: 1px solid red;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+#skills-title {
+  width: 50%;
+  max-width: 870px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.card-flip {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: .5s;
+  &:hover .card-front {
+    transform: rotateX(-180deg);
+  }
+  &:hover .card-back {
+    transform: rotateX(0deg);
+  }
+  &:hover .bottom-label {
+    opacity: 0;
+    transition: 0.5s;
+  }
+}
+
+.card-front {
+  height: 120px;
+  width: 120px;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 1s;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: .5s;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  border: 1px solid white;
+}
+
+.bottom-label {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+#html-tile {
+  background-image: url("/assets/html.png");
+}
+
+#css-tile {
+  background-image: url("/assets/css.png");
+}
+
+#scss-tile {
+  background-image: url("/assets/scss.png");
+}
+
+#bootstrap-tile {
+  background-image: url("/assets/bootstrap.png");
+}
+
+#js-tile {
+  background-image: url("/assets/js.png");
+}
+
+#ruby-tile {
+  background-image: url("/assets/ruby.png");
+}
+
+#rails-tile {
+  background-image: url("/assets/rails.png");
+}
+
+#react-tile {
+  background-image: url("/assets/react.png");
+}
+
+#jest-tile {
+  background-image: url("/assets/jest.png");
+}
+
+#git-tile {
+  background-image: url("/assets/git.png");
+}
+
+#github-tile {
+  background-image: url("/assets/github.png");
+}
+
+#heroku-tile {
+  background-image: url("/assets/heroku.png");
+}
+
+#webpack-tile {
+  background-image: url("/assets/webpack.png");
+}
+
+#npm-tile {
+  background-image: url("/assets/npm.png");
+}
+
+#yarn-tile {
+  background-image: url("/assets/yarn.png");
 }

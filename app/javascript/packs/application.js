@@ -144,6 +144,7 @@ document.addEventListener("turbolinks:load", () => {
     
     if (amCode.textContent.length > 21) {
       amCode.textContent = "";
+      counter = 0;
     } else {
       if (amCode.textContent != "<h1>Hello World!</h1>" && !finished) {
         finished = false;

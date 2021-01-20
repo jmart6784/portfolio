@@ -115,8 +115,14 @@
 }
 
 // Skills section
+#skills-title {
+  width: 50%;
+  max-width: 870px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
 .skills-tile-div {
-  border: 1px solid red;
   position: relative;
   display: flex;
   align-items: center;
@@ -124,13 +130,7 @@
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 50px;
-}
-
-#skills-title {
-  width: 50%;
-  max-width: 870px;
-  margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .card-flip {

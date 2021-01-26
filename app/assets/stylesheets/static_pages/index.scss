@@ -72,7 +72,7 @@
 // About me styling
 #static-index-container {
   margin-top: 100vh;
-  padding: 50px 50px 2500px 50px;
+  padding: 50px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -115,6 +115,10 @@
 }
 
 // Skills section
+#skills-container {
+  margin-bottom: 300px;
+}
+
 #skills-title {
   width: 50%;
   max-width: 870px;
@@ -243,4 +247,94 @@
 
 #yarn-tile {
   background-image: url("/assets/yarn.png");
+}
+
+// Projects section
+#projects-title {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+#project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 80px;
+}
+
+.project-div {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: min-content;
+}
+
+.project-image {
+  width: 350px;
+  height: 250px;
+}
+
+.proj-txt-div {
+  box-sizing: border-box;
+  padding: 20px 10px 20px 10px;
+  display: grid;
+  row-gap: 20px;
+}
+
+.project-title {
+  font-size: 22px;
+}
+
+.project-desc {
+  font-size: 18px;
+}
+
+.tags-div {
+  display: flex;
+  column-gap: 10px;
+}
+
+.project-tag {
+  padding: 5px 7px 5px 7px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.project-links-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.project-link {
+  display: block;
+  width: min-content;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+}
+
+
+.project-code:hover {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.project-live:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+.project-soon {
+  width: min-content;
+  border-radius: 5px;
+  background-color: gray;
+  font-size: 20px;
+  border: 1px solid gray;
+  padding: 10px 20px 10px 20px;
 }

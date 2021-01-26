@@ -176,7 +176,7 @@
           <div style="background-image: url('<%= asset_path("/assets/projects/" + project.image) %>')" class="project-image background-image"></div>
 
           <div class="proj-txt-div">
-            <h1 class="project-title"><%= project.title %></h1>
+            <h1 class="project-title line-through"><%= project.title %></h1>
             <p class="project-desc"><%= project.description %></p>
 
             <%
@@ -220,6 +220,14 @@
       <% end %>
       
     </div>
+  </div>
+
+  <div id="contact-container" class="content">
+    <div class="dark-blur"></div>
+
+    <h1 class="contact-title">Contact me</h1>
+    <p class="contact-text">Interested in working together or have questions?</p>
+    <p class="contact-text">jmartinezdev6784@gmail.com</p>
   </div>
 
 </div>

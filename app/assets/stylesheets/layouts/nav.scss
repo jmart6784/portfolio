@@ -7,9 +7,8 @@
 }
 
 #nav-container {
-  max-width: 960px;
   width: 50%;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px 0 20px 0;
 }
 
@@ -34,7 +33,7 @@
 
 #inner-div a {
   padding: 18px;
-  color: rgba(141, 141, 141, 0.6);
+  color: white;
   font-size: 18px;
   font-weight: 900;
   text-decoration: none;
@@ -55,6 +54,23 @@
   transform: scaleX(1); 
 }
 
-#inner-div a:hover {
-  color: rgba(192, 192, 192, 1.0);
+@media only screen and (max-width: 768px) {
+  #nav-container {
+    width: 100%;
+    padding: 15px 0 15px 0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #inner-div a {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #inner-div a {
+    font-size: 14px;
+    padding: 7px;
+  }
 }

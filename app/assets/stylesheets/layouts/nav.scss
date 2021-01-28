@@ -70,7 +70,14 @@
 
 @media only screen and (max-width: 400px) {
   #inner-div a {
-    font-size: 14px;
+    font-size: 13.5px;
+    padding: 7px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  #inner-div a {
+    font-size: 12px;
     padding: 7px;
   }
 }

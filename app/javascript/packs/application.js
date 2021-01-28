@@ -203,3 +203,16 @@ document.addEventListener("turbolinks:load", () => {
   });
 
 });
+
+// Mobile 100vh style fix
+document.addEventListener("turbolinks:load", () => {
+  const appHeight = () => {
+    const doc = document.querySelector("body");
+    const staticDiv = document.getElementById("static-index-container");
+    staticDiv.style.marginTop = `${window.innerHeight}px`;
+    doc.style.height = `${window.innerHeight}px`;
+  };
+
+  window.addEventListener('resize', appHeight);
+  appHeight();
+});

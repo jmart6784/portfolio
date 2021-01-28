@@ -1,6 +1,6 @@
 // Video and video container styling
 #static-vid-div {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -19,8 +19,6 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 100%;
-  height: 100%;
   z-index: -1;
 }
 
@@ -71,7 +69,6 @@
 
 // About me styling
 #static-index-container {
-  margin-top: 100vh;
   padding: 50px 50px 0px 50px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
@@ -324,13 +321,7 @@
   border-radius: 5px;
 }
 
-
-.project-code:hover {
-  background-color: black;
-  border: 1px solid black;
-}
-
-.project-live:hover {
+.project-link:hover {
   background-color: white;
   border: 1px solid white;
   color: black;
@@ -376,4 +367,83 @@
 .contact-text {
   font-size: 30px;
   z-index: 2;
+  text-align: center;
+}
+
+// Mobile querys
+@media only screen and (max-width: 1024px) {
+  .text {
+    margin-left: -275px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  // Flip text
+  .text {
+    width: 510px;
+    margin-left: -200px;
+    height: auto;
+    font-size: 30px;
+  }
+
+  // About me text
+  #static-index-container {
+    padding: 50px 0px 0px 0px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #about-me-div {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 300px;
+  }
+
+  .am-text {
+    font-size: 21px;
+    margin-bottom: 50px;
+  }
+
+  // Project section
+  #project-grid {
+    grid-template-columns: 1fr;
+    row-gap: 80px;
+  }
+
+  // Contact section
+  .contact-title {
+    font-size: 25px;
+  }
+
+  .contact-text {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .text {
+    font-size: 25px;
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .text {
+    margin-left: -160px;
+    font-size: 20px;
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .text {
+    margin-left: -170px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .text {
+    margin-left: -170px;
+  }
 }

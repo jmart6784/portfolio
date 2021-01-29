@@ -216,3 +216,43 @@ document.addEventListener("turbolinks:load", () => {
   window.addEventListener('resize', appHeight);
   appHeight();
 });
+
+// nav links scroll
+document.addEventListener("turbolinks:load", () => {
+  const scrollTo = (selector, yOffset = 0) => {
+    const element = document.querySelector(selector);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+    window.scrollTo({top: y, behavior: 'smooth'});
+  };
+
+  let home = document.getElementById("home-link");
+  
+  home.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  });
+
+  let about = document.getElementById("about-link");
+
+  about.addEventListener("click", () => {
+    scrollTo("#about-me-div", -200);
+  });
+
+  let skills = document.getElementById("skills-link");
+
+  skills.addEventListener("click", () => {
+    scrollTo("#skills-container", -200);
+  });
+
+  let projects = document.getElementById("projects-link");
+
+  projects.addEventListener("click", () => {
+    scrollTo("#projects-container", -200);
+  });
+
+  let contact = document.getElementById("contact-link");
+
+  contact.addEventListener("click", () => {
+    scrollTo("#contact-container", 0);
+  });
+});

@@ -20,7 +20,7 @@
 
               <% if tag === "Javascript" %>
                 <p class="project-tag" style="background-color: rgb(172, 152, 0);"><%= tag %></p>
-              <% elsif tag === "Rails" %>
+              <% elsif tag === "Rails" || tag === "Sinatra" %>
                 <p class="project-tag" style="background-color: rgb(143, 0, 10);"><%= tag %></p>
               <% elsif tag === "React" %>
                 <p class="project-tag" style="background-color: rgb(0, 159, 199);"><%= tag %></p>
@@ -30,6 +30,8 @@
                 <p class="project-tag" style="background-color: rgb(2, 119, 189);"><%= tag %></p>
               <% elsif tag === "Jest" %>
                 <p class="project-tag" style="background-color: rgb(204, 70, 21);"><%= tag %></p>
+              <% elsif tag === "Bootstrap" %>
+                <p class="project-tag" style="background-color: rgb(86, 61, 124);"><%= tag %></p>
               <% else %>
                 <p class="project-tag"><%= tag %></p>
               <% end %>

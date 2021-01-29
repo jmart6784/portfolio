@@ -7,7 +7,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-
+// Flip text
 document.addEventListener("turbolinks:load", () => {
   let words = document.querySelectorAll(".word");
   let wordArray = [];
@@ -79,7 +79,7 @@ document.addEventListener("turbolinks:load", () => {
   setInterval(changeWord, 4000);
 
   // Hide flipping text when it gets scrolled past
-  window.addEventListener("scroll", () => {
+  const hideFlip = () => {
     let flipText = document.getElementById("flip-parent-div");
     flipText.style.opacity = "1";
 
@@ -90,7 +90,11 @@ document.addEventListener("turbolinks:load", () => {
         flipText.style.opacity = "1";
       }
     };
-  });
+  };
+
+  hideFlip();
+
+  window.addEventListener("scroll", hideFlip);
 });
 
 // Change nav bar styling depending where user is located
@@ -178,8 +182,26 @@ document.addEventListener("turbolinks:load", () => {
 
 // content reveal on scroll
 document.addEventListener("turbolinks:load", () => {
-
   let allContent = document.querySelectorAll(".content");
+
+  allContent.forEach(content => {
+    content.style.opacity = "0";
+    content.style.transition = "2s";
+
+    if (window.scrollY >= content.getBoundingClientRect().top) {
+      requestAnimationFrame(() =>
+        setTimeout(() => {
+          content.style.opacity = "1";
+        })
+      );
+    } else {
+      requestAnimationFrame(() =>
+        setTimeout(() => {
+          content.style.opacity = "0";
+        })
+      );
+    }
+  });
 
   allContent.forEach(content => {
     content.style.opacity = "0";

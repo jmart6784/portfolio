@@ -336,6 +336,19 @@
   padding: 10px 20px 10px 20px;
 }
 
+.view-all-projects {
+  display: block;
+  font-size: 40px;
+  z-index: 2;
+  padding: 20px 60px 20px 60px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  border-radius: 10px;
+}
+
 // Contact section
 #contact-container {
   display: flex;
@@ -346,17 +359,6 @@
   padding: 100px 0 100px 0;
   row-gap: 20px;
   position: relative;
-}
-
-.dark-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  height: 100%;
-  width: 100%;
 }
 
 .contact-title {

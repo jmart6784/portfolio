@@ -1,10 +1,10 @@
-<div>
+<div id="projects-parent-div">
 
   <div id="project-grid">
 
     <% Project.all.each do |project| %>
 
-      <div class="project-div">
+      <div id="proj-index-color" class="project-div">
         <div style="background-image: url('<%= asset_path("/assets/projects/" + project.image) %>')" class="project-image background-image"></div>
 
         <div class="proj-txt-div">

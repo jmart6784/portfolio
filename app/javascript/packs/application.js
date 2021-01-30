@@ -96,7 +96,7 @@ document.addEventListener("turbolinks:load", () => {
             flipText.style.opacity = "1";
           }
         };
-        
+
       }
     };
 
@@ -257,7 +257,7 @@ document.addEventListener("turbolinks:load", () => {
   appHeight();
 });
 
-// nav links scroll
+// nav links to scroll to a page location
 document.addEventListener("turbolinks:load", () => {
   const scrollTo = (selector, yOffset = 0) => {
     const element = document.querySelector(selector);
@@ -266,35 +266,93 @@ document.addEventListener("turbolinks:load", () => {
     window.scrollTo({top: y, behavior: 'smooth'});
   };
 
-  let home = document.getElementById("home-link");
+  let optionsDiv = document.querySelector(".mobile-inner-div");
+  optionsDiv.style.transform = "translate(-100%, -100%)";
+  optionsDiv.style.transition = "1s";
+  optionsDiv.style.borderRadius = "100%";
 
-  if (document.body.contains(home)) {
-    home.addEventListener("click", () => {
-      window.scrollTo({top: 0, behavior: "smooth"});
+  // Hide menu options when link is clicked
+  const hide = () => {
+    requestAnimationFrame(() =>
+      setTimeout(() => {
+        optionsDiv.style.transform = "translate(-100%, -100%)";
+        optionsDiv.style.borderRadius = "100%";
+      })
+    );
+  };
+
+  let home = document.querySelectorAll(".home-link");
+
+  if (home.length != 0) {
+
+    home.forEach(link => {
+      link.addEventListener("click", () => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+        hide();
+      });
     });
   
-    let about = document.getElementById("about-link");
-  
-    about.addEventListener("click", () => {
-      scrollTo("#about-me-div", -200);
+    let about = document.querySelectorAll(".about-link");
+
+    about.forEach(link => {
+      link.addEventListener("click", () => {
+        scrollTo("#about-me-div", -200);
+        hide();
+      });
     });
   
-    let skills = document.getElementById("skills-link");
-  
-    skills.addEventListener("click", () => {
-      scrollTo("#skills-container", -200);
+    let skills = document.querySelectorAll(".skills-link");
+
+    skills.forEach(link => {
+      link.addEventListener("click", () => {
+        scrollTo("#skills-container", -200);
+        hide();
+      });
     });
   
-    let projects = document.getElementById("projects-link");
-  
-    projects.addEventListener("click", () => {
-      scrollTo("#projects-container", -200);
+    let projects = document.querySelectorAll(".projects-link");
+
+    projects.forEach(link => {
+      link.addEventListener("click", () => {
+        scrollTo("#projects-container", -200);
+        hide();
+      });
     });
   
-    let contact = document.getElementById("contact-link");
-  
-    contact.addEventListener("click", () => {
-      scrollTo("#contact-container", 0);
+    let contact = document.querySelectorAll(".contact-link");
+
+    contact.forEach(link => {
+      link.addEventListener("click", () => {
+        scrollTo("#contact-container", 0);
+        hide();
+      });
     });
   };
+});
+
+// Mobile nav bar animations
+document.addEventListener("turbolinks:load", () => {
+  let hamburger = document.getElementById("mobile-ham");
+  let optionsDiv = document.querySelector(".mobile-inner-div");
+  optionsDiv.style.transform = "translate(-100%, -100%)";
+  optionsDiv.style.transition = "1s";
+  optionsDiv.style.borderRadius = "100%";
+
+  hamburger.addEventListener("click", () => {
+    if (optionsDiv.style.transform === "translate(-100%, -100%)") {
+      requestAnimationFrame(() =>
+        setTimeout(() => {
+          optionsDiv.style.transform = "translate(0%, 0%)";
+          optionsDiv.style.borderRadius = "0%";
+        })
+      );
+    } else {
+      requestAnimationFrame(() =>
+        setTimeout(() => {
+          optionsDiv.style.transform = "translate(-100%, -100%)";
+          optionsDiv.style.borderRadius = "100%";
+        })
+      );
+    };
+  });
 });

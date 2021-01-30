@@ -5,17 +5,46 @@
   <div id="nav-container">
     <div id="inner-div">
       <% if current_page?(root_path) %>
-        <button id="home-link" class="nav-link">Home</button>
-        <button id="about-link" class="nav-link">About</button>
-        <button id="skills-link" class="nav-link">Skills</button>
-        <button id="projects-link" class="nav-link">Projects</button>
-        <button id="contact-link" class="nav-link">Contact</button>
+        <button class="home-link nav-link">Home</button>
+        <button class="about-link nav-link">About</button>
+        <button class="skills-link nav-link">Skills</button>
+        <button class="projects-link nav-link">Projects</button>
+        <button class="contact-link nav-link">Contact</button>
       <% elsif current_page?(projects_path) %>
         <%= link_to "Home", root_path, class: "nav-link" %>
         <%= link_to "About", "#{root_path}#about-me-div", class: "nav-link" %>
         <%= link_to "Skills", "#{root_path}#skills-container", class: "nav-link" %>
         <%= link_to "Projects", "#{root_path}#projects-container", class: "nav-link" %>
         <%= link_to "Contact", "#{root_path}#contact-container", class: "nav-link" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-nav-parent">
+
+  <div id="mobile-nav-container">
+
+    <div class="mobile-header">
+      <button id="mobile-ham">☰</button>
+      <div class="dark-blur"></div>
+    </div>
+    
+
+    <div class="mobile-inner-div">
+
+      <% if current_page?(root_path) %>
+        <button class="home-link mob-nav-link">Home</button>
+        <button class="about-link mob-nav-link">About</button>
+        <button class="skills-link mob-nav-link">Skills</button>
+        <button class="projects-link mob-nav-link">Projects</button>
+        <button class="contact-link mob-nav-link">Contact</button>
+      <% elsif current_page?(projects_path) %>
+        <%= link_to "Home", root_path, class: "mob-nav-link" %>
+        <%= link_to "About", "#{root_path}#about-me-div", class: "mob-nav-link" %>
+        <%= link_to "Skills", "#{root_path}#skills-container", class: "mob-nav-link" %>
+        <%= link_to "Projects", "#{root_path}#projects-container", class: "mob-nav-link" %>
+        <%= link_to "Contact", "#{root_path}#contact-container", class: "mob-nav-link" %>
       <% end %>
     </div>
   </div>

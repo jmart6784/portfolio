@@ -4,7 +4,7 @@ Project.create(image: "cart.png", title: "Shopping Cart", description: "A shoppi
 
 Project.create(image: "booker.png", title: "Odin Flight Booker", description: "A Flight booking app made using Rails", tags: "Rails, CSS", live: "https://odin-flight-booker365.herokuapp.com/", github: "https://github.com/jmart6784/odin-flight-booker")
 
-Project.create(image: "instagram.png", title: "Instagram clone", description: "A full-stack Instagram clone app that uses Rails as the back-end. This project is also mobile friendly.", tags: "Rails, Javascipt, SCSS", live: "Soon", github: "https://github.com/jmart6784/instagram")
+Project.create(image: "instagram.png", title: "Instagram clone", description: "A full-stack Instagram clone app that uses Rails as the back-end. This project is also mobile friendly.", tags: "Rails, Javascript, SCSS", live: "Soon", github: "https://github.com/jmart6784/instagram")
 
 Project.create(image: "odinbook.png", title: "Odin Book", description: "My first attempt(Instgram clone is 2nd) at making a full stack application. I also implemnted omniauth support for Facebook sign in.", tags: "Rails, Javascript, CSS", live: "Soon", github: "https://github.com/jmart6784/odin-facebook")
 

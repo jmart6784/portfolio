@@ -22,7 +22,7 @@ Project.create(image: "flickr.png", title: "Flickr Feed", description: "Practice
 
 Project.create(image: "dynamicui.png", title: "Dynamic interfaces", description: "Practice creating dynamic interfaces using Javascript", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/dynamic-interfaces/", github: "https://github.com/jmart6784/dynamic-interfaces")
 
-Project.create(image: "tictactoe.png", title: "Tic Tac Toe", description: "Tic Tac Toe game create for the purpose of practicing Javascript modules and factory functions.", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/tic-tac-toe/", github: "https://github.com/jmart6784/tic-tac-toe")
+Project.create(image: "tictactoe.png", title: "Tic Tac Toe", description: "Tic Tac Toe game created for the purpose of practicing Javascript modules and factory functions.", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/tic-tac-toe/", github: "https://github.com/jmart6784/tic-tac-toe")
 
 Project.create(image: "library.png", title: "Odin Library", description: "A Library app to track which books you've read. The purpose was to practice Javascript objects and local storage.", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/odin-library/", github: "https://github.com/jmart6784/odin-library")
 

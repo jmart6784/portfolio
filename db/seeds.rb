@@ -14,13 +14,9 @@ Project.create(image: "odinweather.png", title: "Odin Weather", description: "A 
 
 Project.create(image: "memorycard.png", title: "Memory Card", description: "A React app that uses functional components and hooks.", tags: "React, SCSS", live: "https://jmart6784.github.io/memory-card/", github: "https://github.com/jmart6784/memory-card")
 
-Project.create(image: "cv.png", title: "CV Project", description: "A React controlled components exercise app", tags: "React, SCSS", live: "https://jmart6784.github.io/cv-project/", github: "https://github.com/jmart6784/cv-project")
-
 Project.create(image: "todo.png", title: "Todo app", description: "Javascript based todo app used to practice factory functions and modules.", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/odin-todo/", github: "https://github.com/jmart6784/odin-todo")
 
 Project.create(image: "flickr.png", title: "Flickr Feed", description: "Practice using the Flickr API with Rails.", tags: "Rails", live: "https://odin-flickr.herokuapp.com/", github: "https://github.com/jmart6784/my-flickr-feed")
-
-Project.create(image: "dynamicui.png", title: "Dynamic interfaces", description: "Practice creating dynamic interfaces using Javascript", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/dynamic-interfaces/", github: "https://github.com/jmart6784/dynamic-interfaces")
 
 Project.create(image: "tictactoe.png", title: "Tic Tac Toe", description: "Tic Tac Toe game created for the purpose of practicing Javascript modules and factory functions.", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/tic-tac-toe/", github: "https://github.com/jmart6784/tic-tac-toe")
 
@@ -35,8 +31,6 @@ Project.create(image: "gridframework.png", title: "CSS grid Framework", descript
 Project.create(image: "responsivedesign.png", title: "Responsive Design", description: "Practice with responsive design using media queries.", tags: "CSS", live: "https://jmart6784.github.io/odin-responsive-design/", github: "https://github.com/jmart6784/odin-responsive-design")
 
 Project.create(image: "hangman.png", title: "Hangman", description: "A Sinatra based hangman game", tags: "Sinatra, CSS", live: "https://sinatra4567-hangman.herokuapp.com/", github: "https://github.com/jmart6784/sinatra-hangman")
-
-Project.create(image: "jsvalidations.png", title: "JS form validations", description: "Simple Javascript form validation practice", tags: "Javascript", live: "https://jmart6784.github.io/js-form-validation/", github: "https://github.com/jmart6784/js-form-validation")
 
 Project.create(image: "calculator.png", title: "Odin Calculator", description: "A simple calculator app built to practice with Javascript", tags: "Javascript, SCSS", live: "https://jmart6784.github.io/odin-calculator/", github: "https://github.com/jmart6784/odin-calculator")
 

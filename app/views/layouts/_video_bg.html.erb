@@ -1,5 +1,5 @@
-<div id="static-vid-div" class="video-container">
-  <% if current_page?(root_path) %>
+<% if current_page?(root_path) %>
+  <div id="static-vid-div" class="video-container bg-static-index">
     <video src="/assets/vid1.mp4" class="static-index-video" onloadedmetadata="this.muted = true" playsinline autoplay muted loop></video>
 
     <div id="flip-parent-div">
@@ -15,7 +15,9 @@
         </p>
       </div>
     </div>
-  <% elsif current_page?(projects_path) %>
+  </div>
+<% elsif current_page?(projects_path) %>
+  <div id="static-vid-div" class="video-container bg-projects">
     <video src="/assets/vid2.vid" class="static-index-video" onloadedmetadata="this.muted = true" playsinline autoplay muted loop></video>
-  <% end %>
-</div>
+  </div>
+<% end %>
